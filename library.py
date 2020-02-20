@@ -16,7 +16,7 @@ class Library:
         self.score = sum(books_scores[b] for b in self.books_ids)
 
     def update_coefficient(self):
-        self.coefficient = (5*self.score + self.nb_books_per_day_M + len(self.books_ids)) / self.time_sign_T
+        self.coefficient = self.score / self.time_sign_T
     
     def update(self, books_taken, books_scores):
         self.update_books(books_taken)
